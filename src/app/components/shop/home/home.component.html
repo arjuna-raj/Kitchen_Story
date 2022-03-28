@@ -1,0 +1,20 @@
+<!-- <div class="menuProducts">
+    <form>
+      <button>Meat</button>
+      <button>Vegetables</button>
+      <button>Dairy</button>
+      <button>Utensils</button>
+      <button>All</button>
+    </form>
+  </div> -->
+
+<div class="row">
+    <div class="col-6">
+      <product-list (productAdded)="addProductToCart($event)" [products]="productList"></product-list>
+    </div>
+    <div class="col-6">
+      <cart-comp [products]="cartList" (productRemoved)="removeProduct($event)"></cart-comp>
+      <a href="/checkout" class="btn btn-primary">Checkout</a>
+    </div>
+  </div>
+  
